@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        *::selection
+        {
+            color: rgba(255, 255, 255,0.5);
+            background-color: rgba(255, 255, 255,0.5);
+        }
+        body{
+            margin: 0px;
+            /* width: 100vw; */
+        }
+
+            .main
+            {
+                background-image: linear-gradient(rgba(0, 0, 0,0.6), rgba(0, 0, 0,0.5)), url(./laptop-7025341_1920.jpg);
+                background-size: 100%;
+                background-position: cover;
+                background-repeat: no-repeat;
+                /* height: 150vh;
+                width: 100vw; */
+            }
+            nav{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0px 10px;
+                /* background-color: rgba(0, 0, 0, 0.5);     */
+            }
+            /* WHEN INCREASING FONT SIZE ; EXTRA MARGIN ON TOP HOW TO DELETE? */
+            /* HOW TO CROP TOP PART PF IMAGE? */
+            .logo h1{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 40px;
+                color:  rgb(241, 7, 7);
+                padding: 0px 10px;
+            }
+
+            .hyperlinks select{
+                height: 35px;
+                width: 110px;
+                margin-right: 15px;
+                color: whitesmoke;
+                background-color: rgba(149, 145, 145, 0.1);
+                padding: 0px 5px;
+                padding-left: 20px;
+                font-weight: bold;
+                border-radius: 5px;
+                font-size: 15px;
+
+            }
+            .hyperlinks button{
+                height: 35px;
+                width: 80px;
+                border-radius: 5px;
+                background-color: rgb(222, 7, 7); 
+                color: white;
+                font-weight: bold;
+                font-size: 15px;
+                border: none;
+                /* margin-right: 10px; */
+            }
+            .hyperlinks button:hover
+            {
+                background-color:rgba(222, 7, 7, 0.5); 
+                cursor: pointer;
+            }
+            .hyperlinks select:hover
+            {
+                background-color: rgba(196, 196, 196, 0.5);
+                cursor: pointer;
+            }
+            .main-heads {
+                text-align: center;
+                color: white;
+                font-size: 20px;    
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .main-heads h1{
+                font-weight: bold;
+                font-size: 50px;
+            }
+            .main-heads h3{
+                font-weight: lighter;
+            }
+            .inputtxt-btn
+            {
+                display: flex;
+                justify-content: center;
+            }
+            /* WHY EVEN SUBMIT BTN IS GETTING STYLED? ; IN HEIGHT  */
+            .inputtxt-btn #txt{
+                height: 50px;
+                padding: 0px 15px;
+                background-color: rgb(5, 5, 5, 0.5);
+                color: white;
+                border-width: 1px;
+                border-radius: 5px;
+                margin-right: 10px;
+                width: 280px;
+            }
+            /* WHAT IS :: ?? */
+            .inputtxt-btn ::placeholder
+            {
+                color: white;
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .inputtxt-btn button{
+                background-color: rgb(222, 7, 7); ;
+                border: none;
+                color: white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: bold;
+                width: 180px;
+                font-size: 20px;
+                border-radius: 5px;
+            }
+            .inputtxt-btn button:hover
+            {
+                background-color: rgba(222, 7, 7, 0.5); ;
+                cursor: pointer;
+            }
+            .all-center{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                /* width: 100vw; */
+            }
+            .hyperlinks
+            {
+                padding-right: 20px;
+            }
+            .page02
+            {
+                background-color: black;
+                height: 140vh;
+                
+            }
+            .page02-elements
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* padding: 150px 40px; */
+                padding: 100px 40px;
+
+            }
+            .videoplay-page02 img
+            {
+                height: 350px;
+            }
+            .txt-para
+            {
+                color: white;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight:lighter;
+            }
+            .page02-elements h1{
+                font-size: 70px;
+            }
+            .txt-para h3{
+                font-size: 30px;
+                font-weight: lighter;
+            }
+            .page03
+            {
+                background-color: black;
+                height: 120vh;
+            }
+            /* WHITE LINE WAS THERE? AFTER DISPLAY FLEX IT WENT? */
+            .page03-elements
+            {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                /* padding-left: 50px; */
+                padding: 0px 40px;
+            }
+            .page03-elements img{
+                height: 350px;
+            }
+            .page03-elements h1{
+                font-size: 60px;
+            }
+            .page04-elements
+            {
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 40px;
+            }
+            .page04
+            {
+                background-color: black;
+                height: 110vh;
+            }
+            .page04-elements img{
+                height: 350px;
+            }
+            .page04-elements h1{
+                font-size: 60px;
+            }
+            .page05{
+                background-color: black;
+                height: 110vh;
+            }
+            .page05-elements{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+                padding: 0px 40px;
+            }
+            .page05-elements img{
+                height: 350px;
+            }
+            .page05-elements h1{
+                font-size: 60px;
+            }
+            .page06
+            {
+                background-color: black;
+                height: 200vh;
+            }
+            .page06-elements{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .page06-elements h1{
+                color: white;
+            }
+            .page06-elements input{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .page06-elements .txt-btn{
+                display: flex;
+                /* flex-direction: column; */
+                justify-content: center;
+                align-items: center;
+            }
+            .page06-elements h4{
+                color: white;
+            }
+            .page06-elements h1{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 60px;
+            }
+            .page06-elements .dropdown input
+            {
+                padding: 20px 400px;
+                margin-bottom: 10px;
+                border-radius: 0px;
+            }
+            .page06-elements ::placeholder
+            {
+                position: absolute;
+                left: 20px;
+                color: rgb(224, 224, 224);
+                font-weight: lighter;
+                font-size: 20px;
+                width:100vw;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+            .page06-elements h4{
+                padding-top: 10px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 20px;
+            }
+            .page06-elements .txt-btn input{
+                height: 50px;
+                width: 300px;
+                background-color: rgba(0, 0, 0, 0.5);
+                margin-right: 10px;
+                border-radius: 5px;
+                /* border: none; */
+            }
+            .page06-elements .txt-btn ::placeholder
+            {
+                font-size: 20px;
+                color: whitesmoke;
+            }
+            .page06-elements .txt-btn button:hover
+            {
+                background-color: rgba(222, 7, 7, 0.5);
+                cursor: pointer;
+            }
+            .page06-elements .txt-btn input:hover
+            {
+                background-color: rgba(196, 196, 196, 0.5);
+
+            }
+            .page06-elements .txt-btn button{
+                height: 55px;
+                width: 200px;
+                font-size: 20px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                background-color:  rgb(222, 7, 7); ;
+                border-radius: 5px;
+                border: none;
+            }
+            .footer-elements
+            {
+                background-color: black;
+            }
+            .footer-columns-all
+            {
+                display: flex;
+                /* flex-direction: column   ; */
+                justify-content:space-around;
+                align-items: center;
+                /* color: white; */
+            }
+            .footer-columns-all a{
+                color: whitesmoke;
+                margin-bottom: 15px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .footer-columns-all .column-1-footer
+            {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-columns-all .column-2-footer
+            {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-columns-all .column-3-footer
+            {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-columns-all .column-4-footer
+            {
+                display: flex;
+                flex-direction: column;
+            }
+            .footer-dropdown-txt
+            {
+                display: flex;
+                flex-direction: column;
+                color: whitesmoke;
+                padding: 20px 65px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                /* flex-direction: column; */
+            }
+            .footer-dropdown-txt select
+            {
+                width: 100px;
+            }
+            .questions-footer{
+                color: whitesmoke;
+                padding: 30px;
+                margin-left: 35px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            .footer-dropdown-txt select
+            {
+                height: 35px;
+                width: 120px;
+                margin-right: 15px;
+                color: whitesmoke;
+                background-color: rgba(149, 145, 145, 0.1);
+                padding: 0px 5px;
+                padding-left: 20px;
+                font-weight: bold;
+                border-radius: 5px;
+                font-size: 15px;
+            }
+            .footer-dropdown-txt select:hover
+            {
+                background-color: rgba(196, 196, 196, 0.5);
+                cursor: pointer;
+            }
+            .footer-columns-all a:hover
+            {
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+    </style>    
+</head>
+<body >
+    <header class="main">
+        <nav>
+            <div class="logo">
+                <h1>NETFLIX</h1>
+            </div>
+            <div class="hyperlinks">
+                <select name="hyperlinks" id="">
+                    <option value="LANGUAGE">English</option>
+                    <option value="LANGUAGE">KANNADA</option>
+                    <option value="LANGUAGE">HINDI</option>
+                </select>
+                <button>Sign In</button>
+            </div>
+        </nav>
+    
+    <div class="all-center">
+        <div class="main-heads">
+            <h1>Unlimited Movies, TV shows and more</h1>
+            <h3>Watch anytime. Cancel anytime.</h3>
+            <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+        </div>
+        <div class="inputtxt-btn">
+            <input type="text" placeholder="Email address" id="txt">
+            <button>Get Started ></button>
+        </div>
+    </div>
+</header>
+<div class="page02">
+    <div class="page02-elements">
+        <div class="txt-para">
+            <h1>Enjoy on your TV</h1>
+           <h3>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h3>
+        </div>
+        <div class="videoplay-page02">
+            <img src="./tv.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="page03">
+    <div class="page03-elements">
+    <div class="txt-para">
+        <h1>Download your shows to watch offline</h1>
+        <h3>Save your favourites easily and always have something to watch.</h3>
+    </div>
+    <div class="videoplay-page03">
+        <img src="./mobile-0819.jpg" alt="">
+    </div>
+</div>
+</div>
+
+<div class="page04">
+    <div class="page04-elements">
+        <div class="txt-para">
+            <h1>Watch everywhere</h1>
+            <h3>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h3>
+        </div>
+        <div class="videoplay-page04">
+            <img src="./device-pile-in.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="page05">
+    <div class="page05-elements">
+        <div class="txt-para">
+            <h1>Create profiles for kids</h1>
+            <h3>Send children on adventures with their favourite characters in a space made just for them—free with your membership.</h3>
+        </div>
+        <div class="videoplay-page05">
+            <img src="./page05.png" alt="">
+        </div>
+    </div>
+</div>
+<div class="page06">
+    <div class="page06-elements">
+        <h1>Frequently Asked Questions</h1>
+        <div class="dropdown">
+            <input type="text" placeholder="What is Netflix?" disabled>
+            <input type="text" placeholder="How much does Netflix cost?"  disabled>
+            <input type="text" placeholder="Where can I watch?"  disabled>
+            <input type="text" placeholder="How do I cancel?"  disabled>
+            <input type="text" placeholder="What can I watch on Netflix?"  disabled>
+            <input type="text" placeholder="Is Netflix good for kids?" disabled>
+        </div>
+        <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+        <div class="txt-btn">
+            <input type="text" placeholder="Email address">
+            <button>Get Started ></button>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer-elements">
+        <div class="questions-footer">Questions? Call <a href="">000-800-919-1694</a></div>
+        <div class="footer-columns-all">
+        <div class="column-1-footer">
+            <a href="">FAQ</a>
+            <a href="">Investor Relations</a>
+            <a href="">Privacy</a>
+            <a href="">Speed Test</a>
+        </div>
+        <div class="column-2-footer">
+            <a href="">Help Centre</a>
+            <a href="">Jobs</a>
+            <a href="">Cookie Preferences</a>
+            <a href="">Legal Notices</a>
+        </div>
+        <div class="column-3-footer">
+            <a href="">Account</a>
+            <a href="">Ways To Watch</a>
+            <a href="">Corporate Information</a>
+            <a href="">Only on Netflix</a>
+        </div>
+        <div class="column-4-footer">
+            <a href="">Media Centre</a>
+            <a href="">Terms of Use</a>
+            <a href="">Corporate Information</a>
+            <a href="">Contact Us</a>
+        </div>
+    </div>
+    <div class="footer-dropdown-txt">
+        <select name="hyperlinks" id="">
+            <option value="LANGUAGE">English</option>
+            <option value="LANGUAGE">Kannada</option>
+            <option value="LANGUAGE">Hindi</option>
+        </select>
+        <p>Netflix India</p>
+    </div>
+    </div>
+</footer>
+</body>
+</html>
